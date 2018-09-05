@@ -164,7 +164,7 @@ def run_test_digits_in_cube():
     print('Test 1 expected', expected)
     print('      actual:  ', answer)
 
-    
+
 
 def digits_in_cube(n):
     """
