@@ -7,13 +7,15 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
          their colleagues and Jasmine Scott.
 """  # COMPLETED: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
+import math
+
 
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_sum_cosines()
     run_test_sum_square_roots()
 
-import math
+
 def run_test_sum_cosines():
     """ Tests the   sum_cosines   function. """
     # ------------------------------------------------------------------
@@ -32,20 +34,21 @@ def run_test_sum_cosines():
     # Test 1
     expected = .13416
     answer = sum_cosines(3)
-    print ('Test 1 expected', expected)
-    print ('       actual: ', answer)
+    print('Test 1 expected', expected)
+    print('       actual: ', answer)
 
     # Test 2
     expected = -.51956
     answer = sum_cosines(4)
-    print ('Test 2 expected', expected)
-    print ('       actual: ', answer)
+    print('Test 2 expected', expected)
+    print('       actual: ', answer)
 
     # Test 3
     expected = .72435
     answer = sum_cosines(6)
     print('Test 3 expected', expected)
     print('       actual: ', answer)
+
 
 def sum_cosines(n):
     """
@@ -74,7 +77,7 @@ def sum_cosines(n):
 def run_test_sum_square_roots():
     """ Tests the   sum_square_roots   function. """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this function.
+    # COMPLETED: 4. Implement this function.
     #   It TESTS the  sum_square_roots  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -88,9 +91,9 @@ def run_test_sum_square_roots():
 
     # Test 1
     expected = 11.85408
-    answer =  sum_square_roots(5)
-    print ('Test 1 expected', expected)
-    print ('       actual: ', answer)
+    answer = sum_square_roots(5)
+    print('Test 1 expected', expected)
+    print('       actual: ', answer)
 
     # Test 1
     expected = 15.31850
