@@ -127,7 +127,7 @@ def sum_square_roots(n):
         total = total + math.sqrt((k+1)*2)
     return total
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # COMPLETED: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
