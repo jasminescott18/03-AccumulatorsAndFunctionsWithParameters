@@ -31,7 +31,7 @@ def main():
     #         then you are likely not TESTING the methods correctly.
     #       ** Ask a TA or your professor for help in that case. **
     # ------------------------------------------------------------------
-#at the end, uncomment this for additional practice
+    # at the end, uncomment this for additional practice
     # m4t_tester.main()
 
 
@@ -96,6 +96,7 @@ def run_test_sum_of_digits():
     answer = sum_of_digits(62720)
     print('Test 5 expected:', expected)
     print('       actual:  ', answer)
+
 
 def sum_of_digits(number):
     """
@@ -162,8 +163,19 @@ def run_test_digits_in_cube():
     expected = 8
     answer = digits_in_cube(5)
     print('Test 1 expected', expected)
-    print('      actual:  ', answer)
+    print('       actual: ', answer)
 
+    # Test 2
+    expected = 9
+    answer = digits_in_cube(3)
+    print('Test 1 expected', expected)
+    print('       actual: ', answer)
+
+    # Test 3
+    expected = 10
+    answer = digits_in_cube(7)
+    print('Test 1 expected', expected)
+    print('       actual: ', answer)
 
 
 def digits_in_cube(n):
