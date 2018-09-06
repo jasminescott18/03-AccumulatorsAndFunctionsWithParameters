@@ -6,18 +6,26 @@ This module demonstrates simple LOOPS of the form:
 and also USING OBJECTS.
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Jasmine Scott.
+"""  # COMPLETED: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
-
+import math
 
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
+    print_sequence1(20)
+    draw_circles1()
 
-def print_sequence1():
+
+def print_sequence1(n):
+    for k in range(n+1):
+        total = 10 * k
+        print(total)
+
+
     """
     Prints:
        0
@@ -29,7 +37,7 @@ def print_sequence1():
        200
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this function, per its doc-string above.
+    # COMPLETED: 2. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -40,6 +48,8 @@ def print_sequence1():
 
 
 def draw_circles1():
+    
+
     """
     -- Constructs an rg.RoseWindow whose width and height are both 400.
     -- Constructs and draws 21 rg.Circle objects such that:
