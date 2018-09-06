@@ -217,7 +217,7 @@ def run_test_digits_in_power():
 
     # Test 1
     expected = 18
-    answer = digits_in_power(12,3)
+    answer = digits_in_power(12, 3)
     print('Test 1 expected', expected)
     print('       actual: ', answer)
 
@@ -249,7 +249,7 @@ def digits_in_power(n, k):
     return sum_of_digits(x)
 
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # COMPLETED: 6. Implement and test this function.
     #
     ####################################################################
     # IMPORTANT: CALL, as many times as needed,
@@ -272,6 +272,11 @@ def run_test_fancy_sums_of_digits():
     print('--------------------------------------------------')
     print('Testing the   fancy_sums_of_digits   function:')
     print('--------------------------------------------------')
+    # Test 1
+    expected = 19084
+    answer = fancy_sums_of_digits(2)
+    print('Test 1 expected', expected)
+    print('       actual: ', answer)
 
     # ------------------------------------------------------------------
     # HINT:  For your 1st test, consider  n=10.  Figure out BY HAND
@@ -306,6 +311,10 @@ def fancy_sums_of_digits(n):
             -- the sum of the digits in (X ** Y) is 124309 (trust me!)
             -- so this function returns 124309.
     """
+    X = sum_of_digits(n ** 1000)
+    Y = sum_of_digits(n ** 999)
+
+    return fancy_sums_of_digits(X ** Y)
     # ------------------------------------------------------------------
     # TODO: 8. Implement and test this function.
     #
