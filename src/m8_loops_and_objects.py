@@ -21,6 +21,7 @@ def main():
     print_sequence2(18)
     draw_circles2(18)
     print_sequence3(100)
+    draw_circles3(100)
 
 
 def print_sequence1(n):
@@ -150,7 +151,7 @@ def print_sequence3(n):
       100.
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement this function, per its doc-string above.
+    # COMPLETED: 6. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -163,7 +164,8 @@ def print_sequence3(n):
         total = total + 1
         print(total)
 
-def draw_circles3():
+
+def draw_circles3(n):
     """
     -- Constructs an rg.RoseWindow whose width and height are both 300.
     -- Constructs and draws 100 rg.Circle objects such that:
@@ -172,7 +174,7 @@ def draw_circles3():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement this function, per its doc-string above.
+    # COMPLETED: 7. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -180,7 +182,17 @@ def draw_circles3():
     print('--------------------------------------------------')
     print('Running draw_circles3:  See graphics window')
     print('--------------------------------------------------')
-
+    width = 300
+    height = 300
+    window = rg.RoseWindow(width, height)
+    center_point = rg.Point(200, 150)
+    radius = 0
+    for k in range(n):
+        radius = radius + 1
+        circle = rg.Circle(center_point, radius)
+        circle.attach_to(window)
+        window.render()
+    window.close_on_mouse_click()
 
 def print_cosines():
     """
