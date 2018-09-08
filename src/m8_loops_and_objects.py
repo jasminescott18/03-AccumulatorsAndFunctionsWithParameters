@@ -52,15 +52,13 @@ def draw_circles1():
     height = 400
     window = rg.RoseWindow(width, height)
     center_point = rg.Point(200, 200)
-    lilly = rg.Circle(center_point, 2)
     for k in range(21):
         radius = k * 10
         circle = rg.Circle(center_point, radius)
         circle.attach_to(window)
-    circle.attach_to(window)
-
-    window.close_on_mouse_click(
-
+        circle.attach_to(window)
+        window.render()
+    window.close_on_mouse_click()
     """
     -- Constructs an rg.RoseWindow whose width and height are both 400.
     -- Constructs and draws 21 rg.Circle objects such that:
@@ -74,6 +72,7 @@ def draw_circles1():
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # HINT: You might find a prior module useful when 'writing' this code.
     # ------------------------------------------------------------------
+
     print()
     print('--------------------------------------------------')
     print('Running draw_circles1:  See graphics window')
