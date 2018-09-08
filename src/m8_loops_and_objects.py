@@ -12,6 +12,7 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
 import rosegraphics as rg
 import math
 
+
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
@@ -23,6 +24,7 @@ def main():
     print_sequence3(100)
     draw_circles3(100)
     print_cosines(101)
+    draw_cosines_and_sines(101)
 
 
 def print_sequence1(n):
@@ -234,7 +236,8 @@ def print_cosines(n):
         total = math.cos(k) * 80
         print(total)
 
-def draw_cosines_and_sines():
+
+def draw_cosines_and_sines(n):
     """
     -- Constructs a window whose width and height are both 400.
     -- Constructs and draws rg.Circle objects such that:
@@ -249,7 +252,7 @@ def draw_cosines_and_sines():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 9. Implement this function, per its doc-string above.
+    # COMPLETED: 9. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -257,11 +260,21 @@ def draw_cosines_and_sines():
     print('--------------------------------------------------')
     print('Running draw_cosines_and_sines:  See graphics window')
     print('--------------------------------------------------')
-
+    width = 400
+    height = 400
+    window = rg.RoseWindow(width, height)
+    for k in range(n):
+        center_point = rg.Point(200 + (80 * math.cos(k)), 200 + (80 * math.sin(k)))
+        circle = rg.Circle(center_point, 10)
+        circle.attach_to(window)
+        window.render()
+    window.close_on_mouse_click()
 
 # ----------------------------------------------------------------------
 # If this module is running at the top level (as opposed to being
 # imported by another module), then call the 'main' function.
 # ----------------------------------------------------------------------
+
+
 if __name__ == '__main__':
     main()
