@@ -10,7 +10,7 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
 """  # COMPLETED: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
-import math
+
 
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
@@ -48,7 +48,18 @@ def print_sequence1(n):
 
 
 def draw_circles1():
-    
+    width = 400
+    height = 400
+    window = rg.RoseWindow(width, height)
+    center_point = rg.Point(200, 200)
+    lilly = rg.Circle(center_point, 2)
+    for k in range(21):
+        radius = k * 10
+        circle = rg.Circle(center_point, radius)
+        circle.attach_to(window)
+    circle.attach_to(window)
+
+    window.close_on_mouse_click(
 
     """
     -- Constructs an rg.RoseWindow whose width and height are both 400.
@@ -58,7 +69,7 @@ def draw_circles1():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # TODO: 3. Implement this function, per its doc-string above.(
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # HINT: You might find a prior module useful when 'writing' this code.
