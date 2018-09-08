@@ -10,7 +10,7 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
 """  # COMPLETED: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
-
+import math
 
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
@@ -22,6 +22,7 @@ def main():
     draw_circles2(18)
     print_sequence3(100)
     draw_circles3(100)
+    print_cosines(101)
 
 
 def print_sequence1(n):
@@ -194,7 +195,8 @@ def draw_circles3(n):
         window.render()
     window.close_on_mouse_click()
 
-def print_cosines():
+
+def print_cosines(n):
     """
     For each of the integers 0  1  2  ... 100,
     prints 80 times the cosine of that integer.
@@ -213,7 +215,7 @@ def print_cosines():
        68.9855097830147
     """
     # ------------------------------------------------------------------
-    # TODO: 8. Implement this function, per its doc-string above.
+    # COMPLETED: 8. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     #
@@ -228,7 +230,9 @@ def print_cosines():
     print('--------------------------------------------------')
     print('Running print_cosines:')
     print('--------------------------------------------------')
-
+    for k in range(n):
+        total = math.cos(k) * 80
+        print(total)
 
 def draw_cosines_and_sines():
     """
