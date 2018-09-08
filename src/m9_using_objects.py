@@ -15,6 +15,7 @@ def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
     two_circles()
+    circle_and_rectangle()
 
 
 def two_circles():
@@ -47,6 +48,7 @@ def two_circles():
     window.render()
     window.close_on_mouse_click()
 
+
 def circle_and_rectangle():
     """
     -- Constructs an rg.RoseWindow.
@@ -78,8 +80,32 @@ def circle_and_rectangle():
            75.0
            150.0
     """
+    width = 500
+    height = 500
+    window = rg.RoseWindow(width, height)
+    center_point = rg.Point(150, 150)
+    trunks = rg.Circle(center_point, 60)
+    trunks.fill_color = 'blue'
+    point1 = rg.Point(300, 300)
+    point2 = rg.Point(200, 250)
+    bulla = rg.Rectangle(point1, point2)
+    trunks.attach_to(window)
+    bulla.attach_to(window)
+    window.render()
+    print('Trunks circle')
+    print(trunks.fill_color)
+    print(center_point)
+    print(center_point.x)
+    print(center_point.y)
+
+    print('Bulla rectangle')
+    print(bulla.fill_color)
+    print(bulla.corner_2)
+    print(point2.x)
+    print(point2.y)
+    window.close_on_mouse_click()
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its green doc-string above.
+    # COMPLETED: 3. Implement this function, per its green doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
